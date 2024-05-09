@@ -30,3 +30,21 @@ model Rol {
   name  String @unique
   users User[]
 }
+
+// Product with categories
+model Product {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String
+  price       Float   @default(0)
+  stock       Int
+  image       String
+  categories  Category[]
+}
+
+// Category
+model Category {
+  id       Int      @id @default(autoincrement())
+  name     String
+  products Product[]
+}
