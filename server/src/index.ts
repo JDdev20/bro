@@ -1,6 +1,5 @@
-import { envs } from "./config/plugins/envs.plugin";
+import { serverConfig } from "./config/plugins/server.plugins";
 import { Server } from "./presentation/server";
-import express from "express";
 
 (async () => {
   main();
@@ -8,10 +7,6 @@ import express from "express";
 
 function main() {
   // Crea una instancia de Server con la configuración
-  const serverConfig = {
-    app: express(),
-    port: envs.PORT,
-  };
 
   const server = new Server(serverConfig);
   server.start(); // Inicia el servidor
