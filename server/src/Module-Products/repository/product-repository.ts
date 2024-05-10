@@ -1,6 +1,5 @@
 
 
+export abstract class ProducRepository {
 
-export abstract class ProductClass {
-    
 }
